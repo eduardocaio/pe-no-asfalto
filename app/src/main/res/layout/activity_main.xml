@@ -1,31 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#F5F6FA"
+    android:padding="20dp"
     tools:context=".MainActivity">
 
     <FrameLayout
-        android:id="@+id/containerAnimacao"
+        android:id="@+id/activity_menu_fl_timeline_progress"
         android:layout_width="match_parent"
-        android:layout_height="200dp">
-
-        <View
-            android:id="@+id/linhaTempo"
-            android:layout_width="match_parent"
-            android:layout_height="4dp"
-            android:layout_gravity="center_vertical"
-            android:background="@android:color/darker_gray"/>
-
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
         <ImageView
-            android:id="@+id/imgCarro"
+            android:id="@+id/activity_menu_iv_car"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="start|center_vertical"
-            android:translationY="-25dp"
-            android:src="@drawable/ic_car"/>
+            android:translationY="-26dp"
+            android:src="@drawable/ic_car" />
+
+        <ImageView
+            android:id="@+id/activity_menu_iv_finish"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="end|center_vertical"
+            android:translationY="-13dp"
+            android:alpha="0.7"
+            android:src="@drawable/ic_finish" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_gravity="center_vertical"
+            android:background="#DADADA" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24/02/2026"
+            android:translationY="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15/03/2026"
+            android:translationY="25dp"
+            android:layout_gravity="end" />
     </FrameLayout>
-    
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Último abastecimento"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#222222" />
+
+            <TextView
+                android:id="@+id/activity_menu_tv_last_day_refueling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24/02/2026"
+                android:textSize="14sp"
+                android:textColor="#777777"
+                android:layout_marginBottom="16dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEEEEE"
+                android:layout_marginBottom="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:divider="@android:color/transparent"
+                android:showDividers="middle"
+                android:dividerPadding="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/activity_menu_tv_paid_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="💰 "
+                        android:textSize="16sp"
+                        android:textColor="#333333"/>
+                    <TextView
+                        android:id="@+id/activity_menu_tv_paid_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="R$200,00 (R$6,39)"
+                        android:textSize="16sp"
+                        android:textColor="#333333"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/activity_menu_tv_liters_fueled"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⛽ "
+                        android:textSize="16sp"
+                        android:textColor="#333333"/>
+                    <TextView
+                        android:id="@+id/activity_menu_tv_liters_fueled"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="31,29 Litros"
+                        android:textSize="16sp"
+                        android:textColor="#333333"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/activity_menu_tv_liters_fueled"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📍 "
+                        android:textSize="16sp"
+                        android:textColor="#333333"/>
+                    <TextView
+                        android:id="@+id/activity_menu_tv_distance_traveled"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="350 KM"
+                        android:textSize="16sp"
+                        android:textColor="#333333"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/activity_menu_tv_liters_fueled"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📊 "
+                        android:textSize="16sp"
+                        android:textColor="#333333"/>
+                    <TextView
+                        android:id="@+id/activity_menu_tv_average_consumption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12 KM/L"
+                        android:textSize="16sp"
+                        android:textColor="#333333"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ver mais detalhes"
+                android:textAlignment="center"
+                android:textColor="#2962FF"
+                android:textStyle="bold"
+                android:padding="12dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 </LinearLayout>
