@@ -24,7 +24,6 @@
             android:src="@drawable/ic_car" />
 
         <ImageView
-            android:id="@+id/activity_menu_iv_finish"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_gravity="end|center_vertical"
@@ -39,12 +38,14 @@
             android:background="#DADADA" />
 
         <TextView
+            android:id="@+id/activity_menu_tv_start_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="24/02/2026"
             android:translationY="25dp" />
 
         <TextView
+            android:id="@+id/activity_menu_tv_ed_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="15/03/2026"
@@ -53,6 +54,7 @@
     </FrameLayout>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/activity_menu_cv_last_refueling"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -102,7 +104,6 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <TextView
-                        android:id="@+id/activity_menu_tv_paid_value"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="💰 "
@@ -121,7 +122,6 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <TextView
-                        android:id="@+id/activity_menu_tv_liters_fueled"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="⛽ "
@@ -141,7 +141,6 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <TextView
-                        android:id="@+id/activity_menu_tv_liters_fueled"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="📍 "
@@ -161,7 +160,6 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <TextView
-                        android:id="@+id/activity_menu_tv_liters_fueled"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="📊 "
@@ -192,4 +190,37 @@
                 android:focusable="true"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/activity_menu_bt_new_refueling"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Novo abastecimento"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="12dp"
+        app:cornerRadius="18dp"
+        app:backgroundTint="#2962FF"
+        app:elevation="4dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/activity_menu_bt_history"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Histórico de abastecimentos"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#2962FF"
+        app:cornerRadius="18dp"
+        app:strokeColor="#2962FF"
+        app:strokeWidth="2dp"
+        app:backgroundTint="@android:color/transparent"/>
+
 </LinearLayout>
