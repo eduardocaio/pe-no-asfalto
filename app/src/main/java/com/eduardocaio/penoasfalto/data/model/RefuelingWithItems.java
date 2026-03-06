@@ -7,11 +7,27 @@ import java.util.ArrayList;
 
 public class RefuelingWithItems {
     @Embedded
-    public Refueling refueling;
+    private Refueling refueling;
 
     @Relation(
             parentColumn = "id",
             entityColumn = "refueling_id"
     )
-    public ArrayList<RefuelingItem> items;
+    private ArrayList<RefuelingItem> items;
+
+    public ArrayList<RefuelingItem> getItems() {
+        return items;
+    }
+
+    public void setItems(ArrayList<RefuelingItem> items) {
+        this.items = items;
+    }
+
+    public Refueling getRefueling() {
+        return refueling;
+    }
+
+    public void setRefueling(Refueling refueling) {
+        this.refueling = refueling;
+    }
 }
