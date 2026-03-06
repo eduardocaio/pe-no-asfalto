@@ -10,15 +10,57 @@ import java.math.BigDecimal;
 public class Refueling {
 
     @PrimaryKey(autoGenerate = true)
-    public int id;
+    private int id;
 
     @ColumnInfo(name = "refuel_date_time")
-    public long refuelDateTime;
+    private long refuelDateTime;
 
     @ColumnInfo(name = "odometer_at_reserve")
-    public int odometerAtReserve;
+    private int odometerAtReserve;
 
     @ColumnInfo(name = "amount_paid")
-    public BigDecimal amountPaid;
+    private BigDecimal amountPaid;
 
+    @ColumnInfo(name = "total_liters")
+    private BigDecimal totalLiters;
+
+    public BigDecimal getAmountPaid() {
+        return amountPaid;
+    }
+
+    public void setAmountPaid(BigDecimal amountPaid) {
+        this.amountPaid = amountPaid;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getOdometerAtReserve() {
+        return odometerAtReserve;
+    }
+
+    public void setOdometerAtReserve(int odometerAtReserve) {
+        this.odometerAtReserve = odometerAtReserve;
+    }
+
+    public long getRefuelDateTime() {
+        return refuelDateTime;
+    }
+
+    public void setRefuelDateTime(long refuelDateTime) {
+        this.refuelDateTime = refuelDateTime;
+    }
+
+    public BigDecimal getTotalLiters() {
+        return totalLiters;
+    }
+
+    public void setTotalLiters(BigDecimal totalLiters) {
+        this.totalLiters = totalLiters;
+    }
 }
