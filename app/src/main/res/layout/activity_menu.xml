@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:background="#F5F6FA"
     android:padding="20dp"
-    tools:context=".MainActivity">
+    tools:context=".MenuActivity">
 
     <FrameLayout
         android:id="@+id/activity_menu_fl_timeline_progress"
